@@ -113,7 +113,8 @@ describe("User journey", () => {
     // Assert that it directs to the homepage
     cy.location("pathname").should("eq", "/");
 
-
+    // Clear all cookies to reset the session
+    cy.clearAllCookies()
 
   })
   
