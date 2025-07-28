@@ -1,12 +1,11 @@
-const subscribed = ["john@example.com"]
+const subscribed = ["john@example.com"];
 
-export default function handler(req, res) {
-  if (!req.rawHeaders.includes("application/json")) {
+module.exports = function handler(req, res) {
+  if (!req.headers["content-type"]?.includes("application/json")) {
     res.status(400).json({
       message: `Error: request must be sent as JSON`,
-    })
-
-    return
+    });
+    return;
   }
 
   if (
@@ -16,9 +15,8 @@ export default function handler(req, res) {
   ) {
     res.status(200).json({
       message: `Success: ${req.body.email} has been successfully subscribed`,
-    })
-
-    return
+    });
+    return;
   }
 
   if (
@@ -28,12 +26,13 @@ export default function handler(req, res) {
   ) {
     res.status(403).json({
       message: `Error: ${req.body.email} already exists. Please use a different email address.`,
-    })
-
-    return
+    });
+    return;
   }
 
   res.status(400).json({
     message: "Error: There was an error with your request. Please try again.",
-  })
-}
+  });
+};
+
+
