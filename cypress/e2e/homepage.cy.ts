@@ -12,7 +12,7 @@ describe('homepage', () => {
   })
     it("Homepage contains correct features", () => {
       cy.get('dt').eq(0).contains('4 Courses');
-      cy.get('dt').eq(1).contains('25+ Lessons')
+      cy.get('dt').eq(1).contains('25+ Lessons');
       
     })
   })
@@ -20,7 +20,7 @@ describe('homepage', () => {
   context("courses section", () => {
 
     it("Course: Testing Your First Next.js Application", () => {
-     cy.getByData("get-start").eq(0).click();
+     cy.getByData("get-start-1").eq(0).click();
      cy.location('pathname').should('eq', '/testing-your-first-application'); 
     })
     it("Course: Testing Foundations", () => {
@@ -28,7 +28,7 @@ describe('homepage', () => {
     cy.location("pathname").should("eq", "/testing-foundations"); 
   })
   it("Course: Cypress Fundamentals", () => {
-    cy.getByData("get-start").eq(1).click();
+    cy.getByData("get-start-1").eq(1).click();
     cy.location("pathname").should("eq", "/cypress-fundamentals");
   })
   })
