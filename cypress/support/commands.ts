@@ -1,11 +1,6 @@
 /// <reference types="cypress" />
 
 
-// cypress/support/commands.ts
-
-// Cypress.Commands.add("getByData", (selector: string) => {
-//   return cy.get(`[data-test="${selector}"]`);
-// });
 
 declare namespace Cypress {
   interface Chainable {
