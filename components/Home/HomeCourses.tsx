@@ -31,7 +31,7 @@ export default function HomeCourses({ courses, content, progressService }) {
                         progressService={progressService}
                       />
                       <div className="mt-6">
-                        <a  data-test="get-start-1"
+                        <a  data="get-start-1"
                           href={`/${content[course].slug}`}
                           className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600"
                         >
