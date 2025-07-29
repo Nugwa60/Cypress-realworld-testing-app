@@ -74,7 +74,7 @@ describe("User journey", () => {
       .should("eq", "/");
   });
 
-  it.only("Course: Testing Foundations", () => {
+  it("Course: Testing Foundations", () => {
 
     cy.getByData("get-started").should('exist').click();
 
