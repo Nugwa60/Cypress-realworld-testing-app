@@ -18,7 +18,7 @@ describe("User journey", () => {
     cy.location("pathname")
       .should("eq", "/testing-your-first-application");
     //   ssss
-    
+
     // Step 4: Verify and click course progress links
     cy.getByData("lesson-progress-link-0")
       .contains("App Install and Overview")
@@ -116,6 +116,8 @@ describe("User journey", () => {
 
     // Clear all cookies to reset the session
     cy.clearAllCookies()
+    //test this line
+    cy.getByData("get-started").should('exist').click();
 
   })
   
