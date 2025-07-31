@@ -17,7 +17,8 @@ describe("User journey", () => {
     // Step 3: Verify navigation to the course page
     cy.location("pathname")
       .should("eq", "/testing-your-first-application");
-
+    //   ssss
+    
     // Step 4: Verify and click course progress links
     cy.getByData("lesson-progress-link-0")
       .contains("App Install and Overview")
